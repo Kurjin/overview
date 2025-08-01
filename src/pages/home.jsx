@@ -7,7 +7,7 @@ import Contact from '../components/contact'
 
 const home = () => {
   return (
-    <div className='bg-[#EFEAFD]'>
+    <div className=''>
         <Hero/>
         <Skills />
         <Projects />
