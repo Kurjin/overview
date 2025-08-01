@@ -8,57 +8,57 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "D.A.N.B Financial Consultancy Services",
       description:
-        "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard. Features include user authentication, cart management, order tracking, and comprehensive analytics.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+        "A Single Page Application for a Financing Company to create a vision for collateral and non-collateral loans for business owners, real-state, and personal clients",
+      technologies: ["React", "Node.js", "TailwindCss"],
       image: "bg-gradient-to-br from-blue-500 to-purple-600",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "Full Stack",
-      status: "Live",
-      stars: "2.4k",
-      views: "15.8k",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Collaborative task management tool with real-time updates, team workflows, and analytics dashboard. Built with modern web technologies for seamless team collaboration and productivity tracking.",
-      technologies: ["Vue.js", "Express", "MongoDB", "Socket.io", "Docker"],
-      image: "bg-gradient-to-br from-green-500 to-emerald-600",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "Web App",
+      liveUrl: "#",
+      githubUrl: "#",
+      category: "Front End",
       status: "Beta",
-      stars: "1.8k",
-      views: "12.3k",
+      // stars: "2.4k",
+      // views: "15.8k",
     },
     {
-      title: "AI-Powered Analytics",
+      title: "QCU-FMS: Facilities Management and Reporting System for Quezon City University",
       description:
-        "Machine learning platform for business analytics with predictive modeling and data visualization. Provides actionable insights through advanced algorithms and interactive dashboards.",
-      technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
-      image: "bg-gradient-to-br from-orange-500 to-red-600",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "AI/ML",
-      status: "Live",
-      stars: "3.1k",
-      views: "22.7k",
+        "Collaborative task management tool with real-time updates, job orders, student reports, booking and analytics dashboard. Built with modern web technologies for seamless team collaboration and productivity tracking.",
+      technologies: ["React.js", "Laravel", "MySQL"],
+      image: "bg-gradient-to-br from-green-500 to-emerald-600",
+      liveUrl: "#",
+      githubUrl: "#",
+      category: ["Progressive Web App & Web App"],
+      status: "Beta",
+      // stars: "1.8k",
+      // views: "12.3k",
     },
-    {
-      title: "Social Media Dashboard",
-      description:
-        "Unified dashboard for managing multiple social media accounts with scheduling and analytics. Streamlines social media management with automation and comprehensive reporting features.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Redis", "Vercel"],
-      image: "bg-gradient-to-br from-pink-500 to-rose-600",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "SaaS",
-      status: "Live",
-      stars: "1.9k",
-      views: "18.5k",
-    },
+    // {
+    //   title: "AI-Powered Analytics",
+    //   description:
+    //     "Machine learning platform for business analytics with predictive modeling and data visualization. Provides actionable insights through advanced algorithms and interactive dashboards.",
+    //   technologies: ["Python", "TensorFlow", "React", "D3.js", "FastAPI"],
+    //   image: "bg-gradient-to-br from-orange-500 to-red-600",
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com",
+    //   category: "AI/ML",
+    //   status: "Live",
+    //   stars: "3.1k",
+    //   views: "22.7k",
+    // },
+    // {
+    //   title: "Social Media Dashboard",
+    //   description:
+    //     "Unified dashboard for managing multiple social media accounts with scheduling and analytics. Streamlines social media management with automation and comprehensive reporting features.",
+    //   technologies: ["Next.js", "TypeScript", "Prisma", "Redis", "Vercel"],
+    //   image: "bg-gradient-to-br from-pink-500 to-rose-600",
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com",
+    //   category: "SaaS",
+    //   status: "Live",
+    //   stars: "1.9k",
+    //   views: "18.5k",
+    // },
   ];
 
   // Intersection Observer for scroll animations
@@ -170,7 +170,7 @@ const Projects = () => {
                   </div>
 
                   {/* Stats */}
-                  <div className="absolute bottom-4 left-4 flex items-center space-x-4 text-white/80">
+                  {/*  <div className="absolute bottom-4 left-4 flex items-center space-x-4 text-white/80">
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4" />
                       <span className="text-sm font-medium">
@@ -183,7 +183,7 @@ const Projects = () => {
                         {project.views}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Project Title Overlay */}
                   <div className="relative z-10 text-center">
@@ -271,7 +271,7 @@ const Projects = () => {
           </div>
 
           {/* View All Projects Button */}
-          <div
+          {/* <div
             className={`text-center transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
@@ -286,7 +286,7 @@ const Projects = () => {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 

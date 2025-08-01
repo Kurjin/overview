@@ -25,10 +25,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
+        
         {/* Gradient Orbs */}
         <div 
           className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
@@ -67,7 +68,7 @@ const Hero = () => {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -97,7 +98,7 @@ const Hero = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-200 mb-6 relative">
-              <span className="relative z-10">Front End Developer</span>
+              <span className="relative z-10">Aspring Full Stack Developer</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent blur-xl" />
             </h2>
           </div>
@@ -149,9 +150,9 @@ const Hero = () => {
           }`}>
             <div className="flex justify-center space-x-6 mb-16">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#", label: "Email" }
+                { icon: Github, href: "https://github.com/Kurjin", label: "GitHub" },
+                { icon: Linkedin, href: "linkedin.com/in/eugine-manliclic-89b9b8377", label: "LinkedIn" },
+                { icon: Mail, href: "manliclic.eugine@gmail.com", label: "Email" }
               ].map((social, index) => (
                 <a
                   key={index}
@@ -160,7 +161,7 @@ const Hero = () => {
                   className="group p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 relative overflow-hidden"
                 >
                   <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300 relative z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-pruple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               ))}
             </div>
@@ -181,8 +182,8 @@ const Hero = () => {
                 <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">
                   Scroll to explore
                 </span>
-                <div className="w-6 h-10 border-2 border-gray-400 group-hover:border-purple-400 rounded-full relative transition-colors duration-300">
-                  <div className="w-1 h-3 bg-gray-400 group-hover:bg-purple-400 rounded-full absolute top-2 left-1/2 transform -translate-x-1/2 animate-bounce transition-colors duration-300" />
+                <div className="w-6 h-10 border-2 border-gray-400 group-hover:border-blue-400 rounded-full relative transition-colors duration-300">
+                  <div className="w-1 h-3 bg-gray-400 group-hover:bg-blue-400 rounded-full absolute top-2 left-1/2 transform -translate-x-1/2 animate-bounce transition-colors duration-300" />
                 </div>
               </div>
             </Link>

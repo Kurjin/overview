@@ -41,25 +41,25 @@ const About = () => {
     {
       icon: Code,
       label: "Projects Completed",
-      value: "50+",
+      value: "5+",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Calendar,
       label: "Years Experience",
-      value: "5+",
+      value: "1+",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: Award,
       label: "Happy Clients",
-      value: "30+",
+      value: "10+",
       color: "from-green-500 to-emerald-500",
     },
     {
       icon: Coffee,
       label: "Cups of Coffee",
-      value: "1000+",
+      value: "500+",
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -190,11 +190,11 @@ const About = () => {
                     </div>
                     <div className="flex items-center text-gray-300">
                       <Target className="w-5 h-5 text-purple-400 mr-3" />
-                      <span>Full Stack Developer</span>
+                      <span>Aspiring Full Stack Developer</span>
                     </div>
                     <div className="flex items-center text-gray-300">
                       <Heart className="w-5 h-5 text-pink-400 mr-3" />
-                      <span>Passionate about clean code</span>
+                      <span>Passionate about clean code and learning new trends</span>
                     </div>
                   </div>
                 </div>
@@ -214,9 +214,9 @@ const About = () => {
                 {/* Main Story */}
                 <div className="space-y-6">
                   <p className="text-xl leading-relaxed text-gray-200">
-                    I'm a passionate full-stack developer with over{" "}
+                    I'm a passionate aspiring full-stack developer with over{" "}
                     <span className="text-blue-400 font-semibold">
-                      5 years of experience
+                      1 years of experience
                     </span>{" "}
                     creating digital solutions that matter. My journey started
                     with curiosity about how things work, and it's evolved into
@@ -354,7 +354,7 @@ const About = () => {
                 <Zap className="w-8 h-8 text-yellow-400" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Let's Build Something Amazing Together
+                Learning more... So, Let's Build What's In Your Mind
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 I'm always excited to work on new projects and collaborate with

@@ -28,24 +28,24 @@ const footer = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/Kurjin",
       color: "hover:bg-gray-700",
       hoverColor: "group-hover:text-gray-300"
     },
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/eugine-manliclic-89b9b8377/",
       color: "hover:bg-blue-600",
       hoverColor: "group-hover:text-blue-300"
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com", 
-      color: "hover:bg-sky-500",
-      hoverColor: "group-hover:text-sky-300"
-    },
+    // {
+    //   icon: Twitter,
+    //   label: "Twitter",
+    //   href: "https://twitter.com", 
+    //   color: "hover:bg-sky-500",
+    //   hoverColor: "group-hover:text-sky-300"
+    // },
     {
       icon: Mail,
       label: "Email",
@@ -74,13 +74,13 @@ const footer = () => {
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
-          <div className="md:col-span-2">
-            <div className="mb-6">
+          <div className="md:col-span-2 ">
+            <div className="mb-6 flex flex-col items-center ">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 Eugine Manliclic
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Full Stack Developer passionate about creating beautiful, functional web experiences. 
+                Aspiring Full Stack Developer passionate about creating beautiful, functional web experiences. 
                 Let's build something amazing together.
               </p>
             </div>
