@@ -78,11 +78,11 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+63 961 883 8890",
+      label: "Availability",
+      value: "",
       description: "Mon-Fri 9AM-6PM (GMT+8)",
       color: "from-green-500 to-emerald-500",
-      href: "tel:+639618838890",
+      href: "#",
     },
     {
       icon: MapPin,

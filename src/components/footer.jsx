@@ -94,7 +94,7 @@ const footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 flex items-center">
+            <h4 className="text-white font-semibold mb-4 flex items-center justify-center">
               <Zap className="w-4 h-4 mr-2 text-yellow-400" />
               Quick Links
             </h4>
@@ -106,7 +106,7 @@ const footer = () => {
                   smooth={true}
                   offset={-80}
                   duration={800}
-                  className="block text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer hover:translate-x-1 transform"
+                  className=" block text-gray-400 hover:text-purple-400 transition-colors duration-300 cursor-pointer hover:translate-x-1 transform"
                 >
                   {link.label}
                 </Link>
