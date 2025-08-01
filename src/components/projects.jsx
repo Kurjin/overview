@@ -11,7 +11,7 @@ const Projects = () => {
       title: "D.A.N.B Financial Consultancy Services",
       description:
         "A Single Page Application for a Financing Company to create a vision for collateral and non-collateral loans for business owners, real-state, and personal clients",
-      technologies: ["React", "Node.js", "TailwindCss"],
+      technologies: ["React", "Node.js", "TailwindCSS"],
       image: "bg-gradient-to-br from-blue-500 to-purple-600",
       liveUrl: "#",
       githubUrl: "#",
