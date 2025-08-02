@@ -34,8 +34,8 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-12 ">
+        <div className="flex items-center justify-between h-16 lg:h-16">
           {/* Logo */}
           <div
             className={`font-bold text-2xl transition-all duration-300 ${
@@ -43,7 +43,7 @@ const Navbar = () => {
             }`}
           >
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Kurjin
+              EM
             </span>
           </div>
 
