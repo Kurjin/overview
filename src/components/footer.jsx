@@ -74,8 +74,8 @@ const footer = () => {
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
-          <div className="md:col-span-2 ">
-            <div className="mb-6 flex flex-col items-center ">
+          <div className="md:col-span-2   ">
+            <div className="mb-6 flex flex-col text-left ">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 Eugine Manliclic
               </h3>
@@ -85,11 +85,7 @@ const footer = () => {
               </p>
             </div>
             
-            {/* Status Badge */}
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full backdrop-blur-sm">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm text-green-300 font-medium">Available for new projects</span>
-            </div>
+           
           </div>
 
           {/* Quick Links */}
@@ -174,20 +170,13 @@ const footer = () => {
               <Coffee className="w-4 h-4 text-amber-500 animate-bounce" />
             </div>
 
-            {/* Back to Top Button */}
-            <button
-              onClick={scrollToTop}
-              className="group p-3 bg-white/5 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 border border-white/20 hover:border-purple-400/40 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25"
-              aria-label="Scroll to top"
-            >
-              <ArrowUp className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
-            </button>
+            
           </div>
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-2xl" />
-        <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/10 to-transparent rounded-full blur-2xl" />
+        {/* <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-2xl" /> */}
+        {/* <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/10 to-transparent rounded-full blur-2xl" /> */}
       </div>
 
       {/* Floating particles */}
@@ -204,23 +193,7 @@ const footer = () => {
         />
       ))}
 
-      {/* Custom CSS for floating animation */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-            opacity: 0.3;
-          }
-          50% {
-            transform: translateY(-10px) rotate(180deg);
-            opacity: 0.8;
-          }
-        }
-        
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-      `}</style>
+     
     </footer>
   );
 };
