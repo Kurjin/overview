@@ -13,6 +13,7 @@ import {
   Star,
   Heart,
   Zap,
+  RefreshCw
 } from "lucide-react";
 
 const Contact = () => {
@@ -76,14 +77,14 @@ const Contact = () => {
       color: "from-blue-500 to-cyan-500",
       href: "mailto:eugine@example.com",
     },
-    {
-      icon: Phone,
-      label: "Availability",
-      value: "",
-      description: "Mon-Fri 9AM-6PM (GMT+8)",
-      color: "from-green-500 to-emerald-500",
-      href: "#",
-    },
+    // {
+    //   icon: Phone,
+    //   label: "Availability",
+    //   value: "",
+    //   description: "Mon-Fri 9AM-6PM (GMT+8)",
+    //   color: "from-green-500 to-emerald-500",
+    //   href: "#",
+    // },
     {
       icon: MapPin,
       label: "Location",
@@ -256,6 +257,7 @@ const Contact = () => {
                           Name *
                         </label>
                         <input
+                          disabled
                           id="name"
                           name="name"
                           type="text"
@@ -274,6 +276,7 @@ const Contact = () => {
                           Email *
                         </label>
                         <input
+                          disabled
                           id="email"
                           name="email"
                           type="email"
@@ -294,6 +297,7 @@ const Contact = () => {
                         Subject *
                       </label>
                       <input
+                        disabled
                         id="subject"
                         name="subject"
                         type="text"
@@ -313,6 +317,7 @@ const Contact = () => {
                         Message *
                       </label>
                       <textarea
+                        disabled
                         id="message"
                         name="message"
                         required
@@ -352,10 +357,22 @@ const Contact = () => {
 
                   {/* Response Time Badge */}
                   <div className="mt-6 flex items-center justify-center text-gray-400">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm">
-                      I typically respond within 24 hours
-                    </span>
+                    {/* <Clock className="w-4 h-4 mr-2" /> */}
+                    {/* Status Message */}
+                    <div
+                      className={`flex items-center justify-center text-gray-400 mt-4 transform transition-all duration-1000 ${
+                        isVisible
+                          ? "translate-y-0 opacity-100"
+                          : "translate-y-4 opacity-0"
+                      }`}
+                      style={{ animationDelay: "800ms" }}
+                    >
+                      <RefreshCw
+                        className="w-4 h-4 mr-2 animate-spin"
+                        style={{ animationDuration: "2s" }}
+                      />
+                      <span>System updates in progress...</span>
+                    </div>
                   </div>
                 </div>
               </div>

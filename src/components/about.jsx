@@ -16,7 +16,6 @@ import {
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredStat, setHoveredStat] = useState(null);
   const sectionRef = useRef(null);
 
   // Intersection Observer for scroll animations
@@ -37,32 +36,6 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
-  const stats = [
-    {
-      icon: Code,
-      label: "Projects Completed",
-      value: "5+",
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Calendar,
-      label: "Years Experience",
-      value: "1+",
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: Award,
-      label: "Happy Clients",
-      value: "10+",
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: Coffee,
-      label: "Cups of Coffee",
-      value: "500+",
-      color: "from-orange-500 to-red-500",
-    },
-  ];
 
   const interests = [
     {
@@ -214,9 +187,9 @@ const About = () => {
                 {/* Main Story */}
                 <div className="space-y-6">
                   <p className="text-xl leading-relaxed text-gray-200">
-                    I'm a passionate aspiring full-stack developer with over{" "}
+                    I'm a passionate aspiring full-stack developer with {" "}
                     <span className="text-blue-400 font-semibold">
-                      1 years of experience
+                      1 year of experience
                     </span>{" "}
                     creating digital solutions that matter. My journey started
                     with curiosity about how things work, and it's evolved into
@@ -273,72 +246,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Stats Section */}
-          <div
-            className={`transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
-            }`}
-            style={{ animationDelay: "800ms" }}
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <div
-                    key={index}
-                    className={`group relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-purple-400/40 transition-all duration-300 hover:scale-110 text-center transform ${
-                      isVisible
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-4 opacity-0"
-                    }`}
-                    style={{
-                      animationDelay: `${1000 + index * 100}ms`,
-                      boxShadow:
-                        hoveredStat === index
-                          ? "0 20px 40px -12px rgba(168, 85, 247, 0.25)"
-                          : "none",
-                    }}
-                    onMouseEnter={() => setHoveredStat(index)}
-                    onMouseLeave={() => setHoveredStat(null)}
-                  >
-                    {/* Background Gradient */}
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${stat.color.replace(
-                        "500",
-                        "500/5"
-                      )} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                    />
-
-                    {/* Icon */}
-                    <div
-                      className={`inline-flex p-3 bg-gradient-to-r ${stat.color} rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-
-                    {/* Value */}
-                    <div
-                      className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 relative z-10`}
-                    >
-                      {stat.value}
-                    </div>
-
-                    {/* Label */}
-                    <div className="text-gray-400 text-sm font-medium relative z-10">
-                      {stat.label}
-                    </div>
-
-                    {/* Hover Effect */}
-                    {hoveredStat === index && (
-                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-ping" />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
 
           {/* Call to Action */}
           <div
@@ -361,12 +268,7 @@ const About = () => {
                 fellow developers. Whether you have a project in mind or just
                 want to chat about technology, feel free to reach out!
               </p>
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25">
-                <span className="flex items-center">
-                  Get In Touch
-                  <Heart className="w-5 h-5 ml-2 group-hover:animate-pulse" />
-                </span>
-              </button>
+            
             </div>
           </div>
         </div>
