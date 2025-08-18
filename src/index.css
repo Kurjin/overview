@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* Marquee animation and fading mask */
+:root {
+  --marquee-duration: 25s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee var(--marquee-duration) linear infinite;
+}
+
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}

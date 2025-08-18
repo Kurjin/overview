@@ -1,62 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  Code,
-  Database,
-  Settings,
-  Star,
-  Zap,
-  Layers,
-  RefreshCw,
-} from "lucide-react";
+import { Layers } from "lucide-react";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredCategory, setHoveredCategory] = useState(null);
   const sectionRef = useRef(null);
+  const containerRef = useRef(null);
+  const trackRef = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
-  const skillCategories = [
-    {
-      title: "Frontend",
-      icon: Code,
-      skills: [
-        { name: "React", level: 60 },
-        { name: "TypeScript", level: 70 },
-        { name: "JavaScript", level: 60 },
-        { name: "Tailwind CSS", level: 80 },
-      ],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-500/10 to-cyan-500/10",
-      borderColor: "border-blue-500/20",
-      hoverColor: "hover:border-blue-400/40",
-    },
-    {
-      title: "Backend",
-      icon: Database,
-      skills: [
-        { name: "Node.js", level: 70 },
-        { name: "MySQL", level: 70 },
-        { name: "Php", level: 60 },
-        { name: "Laravel", level: 70 },
-        { name: ".Net", level: 70 },
-      ],
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-500/10 to-emerald-500/10",
-      borderColor: "border-green-500/20",
-      hoverColor: "hover:border-green-400/40",
-    },
-    {
-      title: "Tools & Others",
-      icon: Settings,
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Figma", level: 85 },
-        { name: "Postman", level: 65 },
-      ],
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-500/10 to-pink-500/10",
-      borderColor: "border-purple-500/20",
-      hoverColor: "hover:border-purple-400/40",
-    },
+  const techStack = [
+    { name: "React", iconClass: "devicon-react-original colored" },
+    { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
+    { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
+    { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-plain colored" },
+    { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
+    { name: "MySQL", iconClass: "devicon-mysql-plain-wordmark colored" },
+    { name: "PHP", iconClass: "devicon-php-plain colored" },
+    { name: "Laravel", iconClass: "devicon-laravel-plain colored" },
+    { name: ".NET", iconClass: "devicon-dotnetcore-plain colored" },
+    { name: "Git", iconClass: "devicon-git-plain colored" },
+    { name: "Figma", iconClass: "devicon-figma-plain colored" },
   ];
 
   // Intersection Observer for scroll animations
@@ -77,11 +40,26 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Detect overflow and animate only when needed
+  useEffect(() => {
+    const measure = () => {
+      if (!containerRef.current || !trackRef.current) return;
+      const containerWidth = containerRef.current.clientWidth;
+      const totalTrackWidth = trackRef.current.scrollWidth;
+      const singleListWidth = totalTrackWidth / 2; // we duplicate the list
+      setShouldAnimate(singleListWidth > containerWidth);
+    };
+
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
   return (
     <section
       ref={sectionRef}
       id="skills"
-      className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+      className="py-20 h-[100vh] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
     >
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
@@ -98,7 +76,7 @@ const Skills = () => {
           >
             <div className="flex justify-center items-center mb-4">
               <Layers className="w-8 h-8 text-blue-400 mr-3" />
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold text-white ">
                 TechStack
               </h2>
             </div>
@@ -108,141 +86,34 @@ const Skills = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full" />
           </div>
 
-          {/* Estimated Time */}
+          {/* Tech Icons Marquee */}
           <div
-            className={`bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-4 transform transition-all duration-1000 ${
+            ref={containerRef}
+            className={`group relative overflow-hidden mask-fade-x mb-4 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0"
             }`}
-            style={{ animationDelay: "1000ms" }}
           >
-            <p className="text-purple-300 font-medium">
-              Expected to be back online shortly
-            </p>
-            <p className="text-gray-400 text-sm mt-1">
-              Thank you for your patience
-            </p>
-          </div>
-
-          {/* Status Message */}
-          <div
-            className={`flex items-center justify-center text-gray-400 mt-8 transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-4 opacity-0"
-            }`}
-            style={{ animationDelay: "800ms" }}
-          >
-            <RefreshCw
-              className="w-4 h-4 mr-2 animate-spin"
-              style={{ animationDuration: "2s" }}
-            />
-            <span>System updates in progress...</span>
-          </div>
-
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {skillCategories.map((category, categoryIndex) => {
-              const IconComponent = category.icon;
-              return (
+            <div
+              ref={trackRef}
+              className="marquee-track items-center gap-8 px-2   h-[6rem]"
+              style={{ animation: shouldAnimate ? undefined : "none" }}
+            >
+              {[...techStack, ...techStack].map((tech, index) => (
                 <div
-                // key={category.title}
-                // className={`group relative p-8 bg-white/5 backdrop-blur-sm border ${
-                //   category.borderColor
-                // } ${
-                //   category.hoverColor
-                // } rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl transform ${
-                //   isVisible
-                //     ? "translate-y-0 opacity-100"
-                //     : "translate-y-12 opacity-0"
-                // }`}
-                // style={{
-                //   animationDelay: `${categoryIndex * 200}ms`,
-                //   boxShadow:
-                //     hoveredCategory === categoryIndex
-                //       ? `0 25px 50px -12px ${
-                //           category.color.includes("blue")
-                //             ? "rgba(59, 130, 246, 0.25)"
-                //             : category.color.includes("green")
-                //             ? "rgba(34, 197, 94, 0.25)"
-                //             : "rgba(168, 85, 247, 0.25)"
-                //         }`
-                //       : "none",
-                // }}
-                // onMouseEnter={() => setHoveredCategory(categoryIndex)}
-                // onMouseLeave={() => setHoveredCategory(null)}
+                  key={`${tech.name}-${index}`}
+                  className="flex items-center justify-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-blue-400/40 hover:scale-[1.03] transition-all duration-300"
+                  title={tech.name}
                 >
-                  {/* Gradient Background */}
-                  <div
-                  // className={`absolute inset-0 bg-gradient-to-br ${category.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                  />
-
-                  {/* Category Header */}
-                  {/* <div className="relative z-10 text-center mb-8">
-                    <div
-                      className={`inline-flex p-4 bg-gradient-to-r ${category.color} rounded-2xl mb-4 shadow-lg`}
-                    >
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {category.title}
-                    </h3>
-                    <div
-                      className={`w-16 h-1 bg-gradient-to-r ${category.color} mx-auto rounded-full`}
-                    />
-                  </div> */}
-
-                  {/* Skills List with Progress Bars */}
-                  {/* <div className="relative z-10 space-y-4">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div
-                        key={skill.name}
-                        className={`transform transition-all duration-500 ${
-                          isVisible
-                            ? "translate-x-0 opacity-100"
-                            : "translate-x-4 opacity-0"
-                        }`}
-                        style={{
-                          animationDelay: `${
-                            categoryIndex * 200 + skillIndex * 100
-                          }ms`,
-                        }}
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-gray-200 font-medium">
-                            {skill.name}
-                          </span>
-                          <span className="text-gray-400 text-sm">
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-700/50 rounded-full h-1 overflow-hidden">
-                          <div
-                            className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out relative`}
-                            style={{
-                              width: isVisible ? `${skill.level}%` : "0%",
-                              transitionDelay: `${
-                                categoryIndex * 200 + skillIndex * 100 + 300
-                              }ms`,
-                            }}
-                          >
-                            <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div> */}
-
-                  {/* Floating Elements */}
-                  {/* <div className="absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div
-                      className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full animate-bounce`}
-                    />
-                  </div> */}
+                  <i className={`${tech.iconClass} text-5xl`} />
+                  {/* Tooltip */}
+                  <span className="absolute bottom-full mb-2 px-3 py-1 text-sm text-white bg-black/80 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                    {tech.name}
+                  </span>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
           {/* Additional Info */}

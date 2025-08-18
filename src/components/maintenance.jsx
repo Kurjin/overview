@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Settings, Clock, Wrench, RefreshCw } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const UnderMaintenance = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,11 +67,11 @@ const UnderMaintenance = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            {/* <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               We're working hard to improve your experience. 
               <br />
               Please check back soon!
-            </p>
+            </p> */}
 
             {/* Status Card */}
             <div
@@ -107,7 +108,7 @@ const UnderMaintenance = () => {
             </div>
 
             {/* Estimated Time */}
-            <div
+            {/* <div
               className={`bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-4 transform transition-all duration-1000 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
@@ -121,11 +122,26 @@ const UnderMaintenance = () => {
               <p className="text-gray-400 text-sm mt-1">
                 Thank you for your patience
               </p>
+            </div> */}
+
+            {/* Back Home Button */}
+            <div
+              className={`mt-8 transform transition-all duration-1000 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
+              style={{ animationDelay: "1100ms" }}
+            >
+              <Link
+                to="/"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-2xl hover:scale-105 transition-all duration-300"
+              >
+                Go back home
+              </Link>
             </div>
           </div>
 
           {/* Footer */}
-          <div
+          {/* <div
             className={`mt-12 text-gray-500 text-sm transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
@@ -134,7 +150,7 @@ const UnderMaintenance = () => {
             style={{ animationDelay: "1200ms" }}
           >
             For urgent inquiries, please contact support
-          </div>
+          </div> */}
         </div>
       </div>
 
