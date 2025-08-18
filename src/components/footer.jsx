@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import {
   Heart,
   Coffee,
-  ArrowUp,
   Github,
   Linkedin,
-  Twitter,
   Mail,
   Code,
   Star,
