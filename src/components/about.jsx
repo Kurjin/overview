@@ -3,16 +3,15 @@ import {
   User,
   Heart,
   Code,
-  Coffee,
   MapPin,
-  Calendar,
-  Award,
   Target,
-  BookOpen,
   Lightbulb,
-  Zap,
   Globe,
+  BookOpen,
+  Download,
+  GraduationCap,
 } from "lucide-react";
+import graduationPhoto from "../assets/2024-06-25Grad.jpg";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,65 +35,52 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
+  const skills = [
+    "React.js", "TypeScript", "JavaScript", "Node.js", 
+    "Laravel", "PHP", "MySQL", "Tailwind CSS",
+    "Git", "Figma", "REST APIs", "Responsive Design"
+  ];
 
-  const interests = [
+  const background = [
+    {
+      icon: GraduationCap,
+      title: "Bachelor of Science in Information Technology",
+      institution: "Quezon City University",
+      period: "2020 - 2024",
+      description: "Graduated with strong foundation in software development, database management, and web technologies."
+    },
     {
       icon: Code,
-      label: "Clean Code",
-      description: "Writing maintainable, scalable solutions",
-    },
-    {
-      icon: Lightbulb,
-      label: "Innovation",
-      description: "Exploring cutting-edge technologies",
-    },
-    {
-      icon: Globe,
-      label: "Open Source",
-      description: "Contributing to community projects",
-    },
-    {
-      icon: BookOpen,
-      label: "Learning",
-      description: "Continuous skill development",
-    },
+      title: "Full Stack Development",
+      institution: "Self-taught & Academic Projects",
+      period: "2022 - Present",
+      description: "Building modern applications with Visual Basic, .Net, Java, React, Node.js, and Laravel. Passionate about clean code and user experience."
+    }
   ];
 
   return (
     <section
       ref={sectionRef}
       id="about"
-      className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+      className="py-20 bg-white relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute top-3/4 right-1/3 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        />
-      </div>
-
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.008)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.008)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+          {/* Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
+            className={`text-center mb-16 transform transition-all duration-700 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
             <div className="flex justify-center items-center mb-4">
               <User className="w-8 h-8 text-blue-400 mr-3" />
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
                 About Me
               </h2>
             </div>
@@ -104,138 +90,81 @@ const About = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            {/* Interactive Profile Card */}
+          {/* Main Content */}
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Left: Photo and Quick Info */}
             <div
-              className={`order-2 lg:order-1 transform transition-all duration-1000 ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "-translate-x-8 opacity-0"
+              className={`lg:col-span-1 transform transition-all duration-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               }`}
-              style={{ animationDelay: "200ms" }}
+              style={{ animationDelay: "150ms" }}
             >
-              <div className="relative group">
-                {/* Main Profile Card */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-500 hover:scale-[1.02] relative overflow-hidden">
-                  {/* Background Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  {/* Profile Image Area */}
-                  <div className="relative mb-8">
-                    <div className="aspect-square bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      {/* Animated Background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 animate-pulse" />
-
-                      {/* Profile Circle */}
-                      <div className="w-40 h-40 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center relative overflow-hidden shadow-2xl">
-                        <div className="w-32 h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center relative">
-                          <span className="text-4xl font-bold text-white relative z-10">
-                            EM
-                          </span>
-                          {/* Rotating Ring */}
-                          <div
-                            className="absolute inset-0 border-4 border-white/20 rounded-full animate-spin"
-                            style={{ animationDuration: "8s" }}
-                          />
-                        </div>
-                        {/* Floating Dots */}
-                        <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                        <div className="absolute bottom-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-bounce" />
-                      </div>
-                    </div>
-
-                    {/* Status Badge */}
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full backdrop-blur-sm">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                        <span className="text-sm text-green-300 font-medium">
-                          Available for work
-                        </span>
-                      </div>
-                    </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+                <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg mx-auto mb-6 border-4 border-white">
+                  <img 
+                    src={graduationPhoto} 
+                    alt="Eugine Manliclic - Graduation Photo" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Eugine Manliclic</h3>
+                <p className="text-blue-400 font-semibold mb-4">Full Stack Developer</p>
+                <div className="space-y-3 text-sm text-gray-300">
+                  <div className="flex items-center justify-center">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Based in Philippines
                   </div>
-
-                  {/* Quick Info */}
-                  <div className="space-y-4 relative z-10">
-                    <div className="flex items-center text-gray-300">
-                      <MapPin className="w-5 h-5 text-blue-400 mr-3" />
-                      <span>Based in Philippines</span>
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <Target className="w-5 h-5 text-purple-400 mr-3" />
-                      <span>Aspiring Full Stack Developer</span>
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <Heart className="w-5 h-5 text-pink-400 mr-3" />
-                      <span>Passionate about clean code and learning new trends</span>
-                    </div>
+                  <div className="flex items-center justify-center">
+                    <Target className="w-4 h-4 mr-2" />
+                    Available for opportunities
                   </div>
                 </div>
+                <button className="mt-6 w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </button>
               </div>
             </div>
 
-            {/* Content */}
+            {/* Right: Bio and Skills */}
             <div
-              className={`order-1 lg:order-2 transform transition-all duration-1000 ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-8 opacity-0"
+              className={`lg:col-span-2 space-y-8 transform transition-all duration-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               }`}
-              style={{ animationDelay: "400ms" }}
+              style={{ animationDelay: "250ms" }}
             >
-              <div className="space-y-8">
-                {/* Main Story */}
-                <div className="space-y-6">
-                  <p className="text-xl leading-relaxed text-gray-200">
-                    I'm a passionate aspiring full-stack developer with {" "}
-                    <span className="text-blue-400 font-semibold">
-                      1 year of experience
-                    </span>{" "}
-                    creating digital solutions that matter. My journey started
-                    with curiosity about how things work, and it's evolved into
-                    a love for building products that solve real problems.
-                  </p>
+              {/* Professional Bio */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-white">Professional Bio</h3>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  I'm a recent graduate with a passion for creating meaningful digital experiences. 
+                  I specialize in building modern applications using React, Node.js, and Laravel, 
+                  with a focus on clean code and exceptional user experiences.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  My journey in technology started with curiosity and has evolved into a love for 
+                  solving real-world problems through innovative software solutions. I'm always 
+                  eager to learn new technologies and contribute to impactful projects.
+                </p>
+              </div>
 
-                  <p className="text-lg leading-relaxed text-gray-300">
-                    When I'm not coding, you'll find me exploring new
-                    technologies, contributing to{" "}
-                    <span className="text-purple-400 font-semibold">
-                      open source projects
-                    </span>
-                    , or sharing knowledge with the developer community. I
-                    believe in writing{" "}
-                    <span className="text-pink-400 font-semibold">
-                      clean, maintainable code
-                    </span>{" "}
-                    and creating user experiences that delight.
-                  </p>
-                </div>
-
-                {/* Interests Grid */}
-                <div className="grid grid-cols-2 gap-4">
-                  {interests.map((interest, index) => {
-                    const IconComponent = interest.icon;
+              {/* Background */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-white">Background</h3>
+                <div className="space-y-4">
+                  {background.map((item, index) => {
+                    const IconComponent = item.icon;
                     return (
-                      <div
-                        key={index}
-                        className={`group p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-400/40 transition-all duration-300 hover:scale-105 transform ${
-                          isVisible
-                            ? "translate-y-0 opacity-100"
-                            : "translate-y-4 opacity-0"
-                        }`}
-                        style={{ animationDelay: `${600 + index * 100}ms` }}
-                      >
-                        <div className="flex items-start space-x-3">
-                          <div className="p-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                        <div className="flex items-start space-x-4">
+                          <div className="p-2 bg-blue-500/20 rounded-lg">
                             <IconComponent className="w-5 h-5 text-blue-400" />
                           </div>
-                          <div>
-                            <h4 className="text-white font-semibold text-sm mb-1">
-                              {interest.label}
-                            </h4>
-                            <p className="text-gray-400 text-xs">
-                              {interest.description}
-                            </p>
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-white">{item.title}</h4>
+                            <p className="text-blue-400 font-medium">{item.institution}</p>
+                            <p className="text-sm text-gray-400 mb-2">{item.period}</p>
+                            <p className="text-gray-300">{item.description}</p>
                           </div>
                         </div>
                       </div>
@@ -243,32 +172,64 @@ const About = () => {
                   })}
                 </div>
               </div>
-            </div>
-          </div>
 
-
-          {/* Call to Action */}
-          <div
-            className={`text-center mt-16 transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0"
-            }`}
-            style={{ animationDelay: "1200ms" }}
-          >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 max-w-3xl mx-auto hover:border-purple-400/40 transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                <Zap className="w-8 h-8 text-yellow-400" />
+              {/* Skills */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-white">Key Skills</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {skills.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 text-blue-300 rounded-lg text-sm font-medium hover:bg-blue-500/20 transition-colors duration-300"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Learning more... So, Let's Build What's In Your Mind
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                I'm always excited to work on new projects and collaborate with
-                fellow developers. Whether you have a project in mind or just
-                want to chat about technology, feel free to reach out!
-              </p>
-            
+
+              {/* Interests */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-white">Interests</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                    <div className="p-2 bg-green-500/20 rounded-lg">
+                      <Code className="w-5 h-5 text-green-400" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">Clean Code</div>
+                      <div className="text-sm text-gray-400">Maintainable solutions</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                    <div className="p-2 bg-purple-500/20 rounded-lg">
+                      <Lightbulb className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">Innovation</div>
+                      <div className="text-sm text-gray-400">New technologies</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                    <div className="p-2 bg-orange-500/20 rounded-lg">
+                      <Globe className="w-5 h-5 text-orange-400" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">Open Source</div>
+                      <div className="text-sm text-gray-400">Community projects</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                    <div className="p-2 bg-red-500/20 rounded-lg">
+                      <BookOpen className="w-5 h-5 text-red-400" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">Learning</div>
+                      <div className="text-sm text-gray-400">Continuous growth</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
