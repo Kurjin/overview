@@ -1,12 +1,75 @@
-# React + Vite
+🚀 **Eugine Manliclic - Portfolio**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website, built with React.js and Tailwind CSS.
+This portfolio showcases my skills, projects, background, and journey as a Full Stack Developer.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📌 **Features**
 
-## Expanding the ESLint configuration
+🎨 Modern UI/UX with Tailwind CSS and smooth animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌙 Responsive Design – works seamlessly on desktop & mobile
+
+🧑‍💻 About Me Section – Professional bio, background, education, and skills
+
+📂 Projects Showcase – Highlighting my best work
+
+✨ Interactive Animations with Intersection Observer
+
+📄 Resume Download button
+
+🌐 Contact Form for easy communication
+
+📱 PWA-ready structure for future offline support
+
+
+🛠️ **Tech Stack**
+
+Frontend: React.js, JavaScript, TypeScript
+
+Styling: Tailwind CSS, Lucide Icons
+
+Backend Experience: Node.js, Laravel, PHP
+
+Database: MySQL
+
+Other Tools: Git, Figma, REST APIs
+
+📖 **About Me**
+
+I’m Eugine Manliclic, a passionate Full Stack Developer based in the Philippines 🇵🇭.
+I specialize in building modern web applications with React, Node.js, and Laravel, focusing on clean code and great user experiences.
+
+**Key Skills:**
+
+React.js, TypeScript, JavaScript
+
+Node.js, Laravel, PHP
+
+MySQL, REST APIs
+
+Tailwind CSS, Responsive Design
+
+Git, Figma
+
+**Education & Background:**
+
+🎓 Bachelor of Science in Information Technology, Quezon City University (2020–2024)
+
+💻 Full Stack Development projects using React, Node.js, Laravel, .NET, Java, and Visual Basic
+
+📬 **Contact Me**
+
+Let’s connect and collaborate!
+
+📧 Email: manliclic.eugine@gmail.com
+
+💼 LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/eugine-manliclic-89b9b8377/)
+
+🐙 GitHub: github.com/kurjin
+
+
+
+📜 License
+
+This project is open source and always available.
