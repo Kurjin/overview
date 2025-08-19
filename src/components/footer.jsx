@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import {
-  Heart,
-  Coffee,
-  Github,
-  Linkedin,
+import React, { useState } from 'react';
+import { 
+  Heart, 
+  Coffee, 
+  ArrowUp, 
+  Github, 
+  Linkedin, 
+  Twitter, 
   Mail,
   Code,
   Star,
-  Zap,
-} from "lucide-react";
-import { Link } from "react-scroll";
+  Zap
+} from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const footer = () => {
   const [hoveredSocial, setHoveredSocial] = useState(null);
@@ -19,7 +21,7 @@ const footer = () => {
     { label: "Skills", to: "skills" },
     { label: "Projects", to: "projects" },
     { label: "About", to: "about" },
-    { label: "Contact", to: "contact" },
+    { label: "Contact", to: "contact" }
   ];
 
   const socialLinks = [
@@ -28,23 +30,34 @@ const footer = () => {
       label: "GitHub",
       href: "https://github.com/Kurjin",
       color: "hover:bg-gray-700",
-      hoverColor: "group-hover:text-gray-300",
+      hoverColor: "group-hover:text-gray-300"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: "LinkedIn", 
       href: "https://www.linkedin.com/in/eugine-manliclic-89b9b8377/",
       color: "hover:bg-blue-600",
-      hoverColor: "group-hover:text-blue-300",
+      hoverColor: "group-hover:text-blue-300"
     },
+    // {
+    //   icon: Twitter,
+    //   label: "Twitter",
+    //   href: "https://twitter.com", 
+    //   color: "hover:bg-sky-500",
+    //   hoverColor: "group-hover:text-sky-300"
+    // },
     {
       icon: Mail,
       label: "Email",
-      href: "/",
+      href: "mailto:eugine@example.com",
       color: "hover:bg-purple-600",
-      hoverColor: "group-hover:text-purple-300",
-    },
+      hoverColor: "group-hover:text-purple-300"
+    }
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-white/10 relative overflow-hidden">
@@ -67,11 +80,12 @@ const footer = () => {
                 Eugine Manliclic
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Aspiring Full Stack Developer passionate about creating
-                beautiful, functional web experiences. Let's build something
-                amazing together.
+                Aspiring Full Stack Developer passionate about creating beautiful, functional web experiences. 
+                Let's build something amazing together.
               </p>
             </div>
+            
+           
           </div>
 
           {/* Quick Links */}
@@ -115,12 +129,8 @@ const footer = () => {
                     onMouseEnter={() => setHoveredSocial(index)}
                     onMouseLeave={() => setHoveredSocial(null)}
                   >
-                    <div
-                      className={`w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${social.color}`}
-                    >
-                      <IconComponent
-                        className={`w-4 h-4 ${social.hoverColor} transition-colors duration-300`}
-                      />
+                    <div className={`w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${social.color}`}>
+                      <IconComponent className={`w-4 h-4 ${social.hoverColor} transition-colors duration-300`} />
                     </div>
                     <span className="text-sm group-hover:translate-x-1 transform transition-transform duration-300">
                       {social.label}
@@ -159,6 +169,8 @@ const footer = () => {
               <span>and lots of</span>
               <Coffee className="w-4 h-4 text-amber-500 animate-bounce" />
             </div>
+
+            
           </div>
         </div>
 
@@ -180,6 +192,8 @@ const footer = () => {
           }}
         />
       ))}
+
+     
     </footer>
   );
 };

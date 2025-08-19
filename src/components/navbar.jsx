@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  const { isDark, toggleTheme } = useTheme();
 
   // Navigation list objects
   const navItem = [
@@ -39,12 +43,10 @@ const Navbar = () => {
           {/* Logo */}
           <div
             className={`font-bold text-2xl transition-all duration-300 ${
-              isScrolled ? "text-gray-800" : "text-white"
+              isScrolled ? "text-gray-800 dark:text-white" : "text-white dark:text-gray-800"
             }`}
           >
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              EM
-            </span>
+            <span className="dark:from-blue-400">EM</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -78,6 +80,41 @@ const Navbar = () => {
                 ></span>
               </Link>
             ))}
+          </div>
+          <div className="flex items-center space-x-3">
+            {/* Dark Mode Toggle */}
+            {/* Dark Mode Button */}
+            {/* <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 ${
+                isScrolled
+                  ? "focus:ring-offset-white dark:focus:ring-offset-gray-900"
+                  : "focus:ring-offset-transparent"
+              } ${
+                isScrolled
+                  ? "bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+                  : "bg-white/10 hover:bg-white/20"
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? (
+                <Moon
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    isScrolled
+                      ? "text-gray-700 dark:text-gray-300"
+                      : "text-white"
+                  }`}
+                />
+              ) : (
+                <Sun
+                  className={`w-5 h-5 transition-all duration-300 ${
+                    isScrolled
+                      ? "text-gray-700 dark:text-gray-300"
+                      : "text-white"
+                  }`}
+                />
+              )}
+            </button> */}
           </div>
 
           {/* Mobile menu button */}
