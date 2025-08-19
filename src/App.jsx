@@ -2,11 +2,6 @@ import React from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./components/navbar";
-import About from "./components/about";
-import Hero from "./components/hero";
-import Projects from "./components/projects";
-import Skills from "./components/skills";
-import Contact from "./components/contact";
 import Home from "./pages/home";
 import Footer from "./components/footer";
 import UnderMaintenance from "./components/maintenance";
@@ -23,7 +18,6 @@ const App = () => {
     <div className="appContainer">
       {shouldShowNavbar && <NavBar />}
       <Routes>
-        {/* <Route path="" element={''}/> */}
         <Route path="/" element={<Home />} />
         <Route path="/maintenance" element={<UnderMaintenance />} />
         <Route path="/oops" element={<Oops />} />

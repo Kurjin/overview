@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Github, ExternalLink, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import danbImg from "../assets/DANB.png";
-import qcuFms from "../assets/qcu_fms_new.png";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +13,7 @@ const Projects = () => {
       stack: ["React", "Node.js", "TailwindCSS"],
       description:
         "A single-page app for a financing company to showcase collateral and non-collateral loan offerings.",
-      image: danbImg,
+      image: "https://placehold.co/800x450/png?text=Project+Image",
       github: "https://github.com/yourname/danb-finance",
       live: "https://danb-finance.vercel.app",
       iconClass: [
@@ -26,10 +24,10 @@ const Projects = () => {
     },
     {
       project: "QCU-FMS: Facilities Management System",
-      stack: ["React", "Node.js", "Chart.js", "Postman", "Laravel", "MySQL"],
+      stack: ["React", "Laravel", "MySQL"],
       description:
         "Facilities and reporting system with job orders, student reports, bookings, and an analytics dashboard.",
-      image: qcuFms,
+      image: "https://placehold.co/800x450/png?text=Project+Image",
       github: "https://github.com/yourname/qcu-fms",
       live: "https://qcu-fms.vercel.app",
       iconClass: [
@@ -102,11 +100,11 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 {/* Project Image */}
-                <div className="aspect-video w-full flex justify-center items-center overflow-hidden bg-slate-800">
+                <div className="aspect-video w-full overflow-hidden bg-slate-800">
                   <img
                     src={item.image}
                     alt={item.project}
-                    className="w-[50%] object-cover  opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -137,7 +135,7 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    {/* <a
+                    <a
                       href="/oops"
                       target="_self"
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white rounded-lg hover:border-blue-400/60 hover:bg-blue-500/10 transition-all duration-300"
@@ -152,14 +150,6 @@ const Projects = () => {
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
-                    </a> */}
-                    <a
-                      href="/maintenance"
-                      target="_self"
-                      className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
                     </a>
                   </div>
                 </div>

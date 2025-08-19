@@ -54,7 +54,7 @@ const About = () => {
       title: "Full Stack Development",
       institution: "Self-taught & Academic Projects",
       period: "2022 - Present",
-      description: "Building modern applications with Visual Basic, .Net, Java, React, Node.js, and Laravel. Passionate about clean code and user experience."
+      description: "Building modern web applications with React, Node.js, and Laravel. Passionate about clean code and user experience."
     }
   ];
 
@@ -138,7 +138,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-white">Professional Bio</h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   I'm a recent graduate with a passion for creating meaningful digital experiences. 
-                  I specialize in building modern applications using React, Node.js, and Laravel, 
+                  I specialize in building modern web applications using React, Node.js, and Laravel, 
                   with a focus on clean code and exceptional user experiences.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">

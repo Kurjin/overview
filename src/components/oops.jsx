@@ -10,7 +10,7 @@ const Oops = () => {
           Oops!
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          Oh no! We don't have that feature yet in our page.
+          oh no, we dont have that feature yet in our page
         </p>
         <div className="mt-8">
           <Link
