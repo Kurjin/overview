@@ -102,11 +102,11 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 {/* Project Image */}
-                <div className="aspect-video w-full overflow-hidden bg-slate-800">
+                <div className="aspect-video w-full overflow-hidden bg-slate-800 flex  items-center justify-center p-2">
                   <img
                     src={item.image}
                     alt={item.project}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-[50%]  object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     loading="lazy"
                   />
                 </div>
