@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Github, ExternalLink, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import qcuImg from "../assets/qcu_fms_new.png";
+import danbImg from "../assets/DANB.png";
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +15,7 @@ const Projects = () => {
       stack: ["React", "Node.js", "TailwindCSS"],
       description:
         "A single-page app for a financing company to showcase collateral and non-collateral loan offerings.",
-      image: "https://placehold.co/800x450/png?text=Project+Image",
+      image: danbImg,
       github: "https://github.com/yourname/danb-finance",
       live: "https://danb-finance.vercel.app",
       iconClass: [
@@ -27,7 +29,7 @@ const Projects = () => {
       stack: ["React", "Laravel", "MySQL"],
       description:
         "Facilities and reporting system with job orders, student reports, bookings, and an analytics dashboard.",
-      image: "https://placehold.co/800x450/png?text=Project+Image",
+      image: qcuImg,
       github: "https://github.com/yourname/qcu-fms",
       live: "https://qcu-fms.vercel.app",
       iconClass: [
