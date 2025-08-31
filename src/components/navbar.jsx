@@ -16,7 +16,7 @@ const Navbar = () => {
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
     { label: "About", id: "about" },
-    { label: "Contact", id: "contact" },
+    // { label: "Contact", id: "contact" },
   ];
 
   // Handle scroll effect

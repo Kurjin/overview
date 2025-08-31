@@ -68,7 +68,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto ">
           {/* Section Header */}
           <div
             className={`text-center mb-16 transform transition-all duration-700 ${
@@ -90,7 +90,7 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2  gap-8 mb-16 ">
             {projects.map((item, index) => (
               <div
                 key={item.project}
@@ -137,14 +137,14 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    <a
+                    {/* <a
                       href="/oops"
                       target="_self"
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white rounded-lg hover:border-blue-400/60 hover:bg-blue-500/10 transition-all duration-300"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
-                    </a>
+                    </a> */}
                     <a
                       href="/oops"
                       target="_self"
@@ -160,7 +160,7 @@ const Projects = () => {
           </div>
 
           {/* View All Projects Button */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <Link
               to="/maintenance"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -168,7 +168,7 @@ const Projects = () => {
               <Code2 className="w-5 h-5 mr-2" />
               View All Projects
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
+      className="min-h-screen border flex items-center justify-center relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
     >
       {/* grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Greeting */}
-          <div
+          {/* <div
             className={`transform transition-all duration-700 ${
               isVisible
                 ? "translate-y-0 opacity-100"
@@ -33,17 +33,17 @@ const Hero = () => {
             }`}
           >
             <p className="text-lg text-gray-200 mb-4 font-medium">Hello, I'm</p>
-          </div>
+          </div> */}
 
           {/* Name */}
           <div
-            className={`transform transition-all duration-700 delay-200 ${
+            className={`transform transition-all duration-700 delay-200  mt-16 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0"
             }`}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-200">
+            <h1 className="text-5xl md:text-5xl sm:text-md  font-bold mb-3 text-gray-200">
               Eugine Manliclic
             </h1>
           </div>
@@ -56,8 +56,8 @@ const Hero = () => {
                 : "translate-y-4 opacity-0"
             }`}
           >
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-8">
-              Full Stack Web Developer
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200 mb-4">
+              Front End Developer
             </h2>
           </div>
 
@@ -69,7 +69,7 @@ const Hero = () => {
                 : "translate-y-4 opacity-0"
             }`}
           >
-            <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
               I build modern web applications with clean code and exceptional
               user experiences. Passionate about creating solutions that make a
               difference.
@@ -89,7 +89,7 @@ const Hero = () => {
               smooth={true}
               offset={-80}
               duration={800}
-              className="inline-block px-8 py-4 bg-gray-900 border border-gray-400 pointer text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-block px-4 py-2 bg-gray-900 border border-gray-400 pointer text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View Projects
             </Link>
@@ -97,7 +97,7 @@ const Hero = () => {
 
           {/* Social Links */}
           <div
-            className={`transform transition-all duration-700 delay-1000 mt-16 ${
+            className={`transform transition-all duration-700 delay-1000 mt-4 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0"
@@ -127,7 +127,7 @@ const Hero = () => {
 
           {/* Scroll Indicator */}
           <div
-            className={`transform transition-all duration-700 delay-1200 mt-12 ${
+            className={`transform transition-all duration-700 delay-1200 mt-10 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-0"
