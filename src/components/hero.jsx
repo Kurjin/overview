@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen border flex items-center justify-center relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
+      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
     >
       {/* grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
