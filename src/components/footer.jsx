@@ -21,7 +21,7 @@ const footer = () => {
     { label: "Skills", to: "skills" },
     { label: "Projects", to: "projects" },
     { label: "About", to: "about" },
-    { label: "Contact", to: "contact" }
+    // { label: "Contact", to: "contact" }
   ];
 
   const socialLinks = [
@@ -49,7 +49,7 @@ const footer = () => {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:eugine@example.com",
+      href: "mailto:manliclic.eugine@gmail.com",
       color: "hover:bg-purple-600",
       hoverColor: "group-hover:text-purple-300"
     }
@@ -111,7 +111,7 @@ const footer = () => {
           </div>
 
           {/* Connect Section */}
-          <div>
+          {/* <div>
             <h4 className="text-white font-semibold mb-4 flex items-center">
               <Star className="w-4 h-4 mr-2 text-yellow-400" />
               Connect
@@ -142,7 +142,7 @@ const footer = () => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Divider */}

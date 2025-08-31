@@ -108,7 +108,7 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Eugine Manliclic</h3>
-                <p className="text-blue-400 font-semibold mb-4">Full Stack Developer</p>
+                <p className="text-blue-400 font-semibold mb-4">Front End Developer</p>
                 <div className="space-y-3 text-sm text-gray-300">
                   <div className="flex items-center justify-center">
                     <MapPin className="w-4 h-4 mr-2" />
@@ -119,10 +119,10 @@ const About = () => {
                     Available for opportunities
                   </div>
                 </div>
-                <button className="mt-6 w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                {/* <button className="mt-6 w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -189,7 +189,7 @@ const About = () => {
               </div>
 
               {/* Interests */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-left">
                 <h3 className="text-2xl font-bold text-white">Interests</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
