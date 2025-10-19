@@ -80,7 +80,7 @@ const footer = () => {
                 Eugine Manliclic
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Aspiring Full Stack Developer passionate about creating beautiful, functional web experiences. 
+                Aspiring Front End Developer passionate about creating beautiful, functional web experiences. 
                 Let's build something amazing together.
               </p>
             </div>
