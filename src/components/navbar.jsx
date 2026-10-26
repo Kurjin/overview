@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center justify-between space-x-1 ">
             {navItem.map((item, index) => (
               <Link
                 key={index}
@@ -82,39 +82,7 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex items-center space-x-3">
-            {/* Dark Mode Toggle */}
-            {/* Dark Mode Button */}
-            {/* <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 ${
-                isScrolled
-                  ? "focus:ring-offset-white dark:focus:ring-offset-gray-900"
-                  : "focus:ring-offset-transparent"
-              } ${
-                isScrolled
-                  ? "bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
-                  : "bg-white/10 hover:bg-white/20"
-              }`}
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? (
-                <Moon
-                  className={`w-5 h-5 transition-all duration-300 ${
-                    isScrolled
-                      ? "text-gray-700 dark:text-gray-300"
-                      : "text-white"
-                  }`}
-                />
-              ) : (
-                <Sun
-                  className={`w-5 h-5 transition-all duration-300 ${
-                    isScrolled
-                      ? "text-gray-700 dark:text-gray-300"
-                      : "text-white"
-                  }`}
-                />
-              )}
-            </button> */}
+          
           </div>
 
           {/* Mobile menu button */}

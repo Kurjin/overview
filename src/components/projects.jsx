@@ -48,7 +48,7 @@ const Projects = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1, rootMargin: "-50px" }
+      { threshold: 0.1, rootMargin: "-50px" },
     );
 
     if (sectionRef.current) {
@@ -133,26 +133,6 @@ const Projects = () => {
                         {tech}
                       </span>
                     ))}
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    {/* <a
-                      href="/oops"
-                      target="_self"
-                      className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white rounded-lg hover:border-blue-400/60 hover:bg-blue-500/10 transition-all duration-300"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </a> */}
-                    <a
-                      href="/oops"
-                      target="_self"
-                      className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
                   </div>
                 </div>
               </div>
