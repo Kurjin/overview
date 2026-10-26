@@ -1,21 +1,7 @@
-import React, { useState } from 'react';
-import { 
-  Heart, 
-  Coffee, 
-  ArrowUp, 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Mail,
-  Code,
-  Star,
-  Zap
-} from 'lucide-react';
-import { Link } from 'react-scroll';
+import { Heart, Coffee, ArrowUp, Mail, Code, Star, Zap } from "lucide-react";
+import { Link } from "react-scroll";
 
 const footer = () => {
-  const [hoveredSocial, setHoveredSocial] = useState(null);
-
   const quickLinks = [
     { label: "Home", to: "home" },
     { label: "Skills", to: "skills" },
@@ -23,41 +9,6 @@ const footer = () => {
     { label: "About", to: "about" },
     // { label: "Contact", to: "contact" }
   ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/Kurjin",
-      color: "hover:bg-gray-700",
-      hoverColor: "group-hover:text-gray-300"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn", 
-      href: "https://www.linkedin.com/in/eugine-manliclic-89b9b8377/",
-      color: "hover:bg-blue-600",
-      hoverColor: "group-hover:text-blue-300"
-    },
-    // {
-    //   icon: Twitter,
-    //   label: "Twitter",
-    //   href: "https://twitter.com", 
-    //   color: "hover:bg-sky-500",
-    //   hoverColor: "group-hover:text-sky-300"
-    // },
-    {
-      icon: Mail,
-      label: "Email",
-      href: "mailto:manliclic.eugine@gmail.com",
-      color: "hover:bg-purple-600",
-      hoverColor: "group-hover:text-purple-300"
-    }
-  ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-white/10 relative overflow-hidden">
@@ -80,15 +31,15 @@ const footer = () => {
                 Eugine Manliclic
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Aspiring Front End Developer passionate about creating beautiful, functional web experiences. 
-                Let's build something amazing together.
+                Aspiring Front End Developer passionate about creating
+                beautiful, functional web experiences. Let's build something
+                amazing together.
               </p>
             </div>
-            
-           
           </div>
 
           {/* Quick Links */}
+          {/*
           <div>
             <h4 className="text-white font-semibold mb-4 flex items-center justify-center">
               <Zap className="w-4 h-4 mr-2 text-yellow-400" />
@@ -109,40 +60,7 @@ const footer = () => {
               ))}
             </nav>
           </div>
-
-          {/* Connect Section */}
-          {/* <div>
-            <h4 className="text-white font-semibold mb-4 flex items-center">
-              <Star className="w-4 h-4 mr-2 text-yellow-400" />
-              Connect
-            </h4>
-            <div className="space-y-3">
-              {socialLinks.map((social, index) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center space-x-3 text-gray-400 hover:text-white transition-all duration-300"
-                    onMouseEnter={() => setHoveredSocial(index)}
-                    onMouseLeave={() => setHoveredSocial(null)}
-                  >
-                    <div className={`w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${social.color}`}>
-                      <IconComponent className={`w-4 h-4 ${social.hoverColor} transition-colors duration-300`} />
-                    </div>
-                    <span className="text-sm group-hover:translate-x-1 transform transition-transform duration-300">
-                      {social.label}
-                    </span>
-                    {hoveredSocial === index && (
-                      <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" />
-                    )}
-                  </a>
-                );
-              })}
-            </div>
-          </div> */}
+          */}
         </div>
 
         {/* Divider */}
@@ -169,14 +87,8 @@ const footer = () => {
               <span>and lots of</span>
               <Coffee className="w-4 h-4 text-amber-500 animate-bounce" />
             </div>
-
-            
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        {/* <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-2xl" /> */}
-        {/* <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-500/10 to-transparent rounded-full blur-2xl" /> */}
       </div>
 
       {/* Floating particles */}
@@ -192,8 +104,6 @@ const footer = () => {
           }}
         />
       ))}
-
-     
     </footer>
   );
 };
