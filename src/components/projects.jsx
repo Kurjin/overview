@@ -64,9 +64,6 @@ const Projects = () => {
       id="projects"
       className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative"
     >
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto ">
           {/* Section Header */}
@@ -94,7 +91,7 @@ const Projects = () => {
             {projects.map((item, index) => (
               <div
                 key={item.project}
-                className={`group bg-white/5  border border-white/10 rounded-2xl overflow-hidden hover:border-blue-400/40 transition-all duration-300 hover:scale-[1.02] transform-gpu will-change-transform ${
+                className={`group bg-white/5  border border-white/10 rounded-2xl overflow-hidden ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
@@ -138,17 +135,6 @@ const Projects = () => {
               </div>
             ))}
           </div>
-
-          {/* View All Projects Button */}
-          {/* <div className="text-center">
-            <Link
-              to="/maintenance"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
-              <Code2 className="w-5 h-5 mr-2" />
-              View All Projects
-            </Link>
-          </div> */}
         </div>
       </div>
     </section>

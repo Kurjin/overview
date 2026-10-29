@@ -16,25 +16,8 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"
     >
-      {/* grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
-
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Greeting */}
-          {/* <div
-            className={`transform transition-all duration-700 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-4 opacity-0"
-            }`}
-          >
-            <p className="text-lg text-gray-200 mb-4 font-medium">Hello, I'm</p>
-          </div> */}
-
           {/* Name */}
           <div
             className={`transform transition-all duration-700 delay-200  mt-16 ${
