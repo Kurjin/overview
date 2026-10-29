@@ -4,15 +4,6 @@ import { Link } from "react-scroll";
 const footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-white/10 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-0 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-8">
@@ -24,8 +15,7 @@ const footer = () => {
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
                 Aspiring Front End Developer passionate about creating
-                beautiful, functional web experiences. Let's build something
-                amazing together.
+                beautiful, functional web experiences.
               </p>
             </div>
           </div>

@@ -74,12 +74,6 @@ const About = () => {
       id="about"
       className="py-20 bg-white relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
     >
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:100px_100px]" />
-
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -113,19 +107,19 @@ const About = () => {
               }`}
               style={{ animationDelay: "150ms" }}
             >
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-2">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 ">
+                <h3 className="text-2xl flex font-bold text-white mb-2">
                   Eugine Manliclic
                 </h3>
-                <p className="text-blue-400 font-semibold mb-4">
+                <p className="text-blue-400 flex font-semibold mb-4">
                   Front End Developer
                 </p>
                 <div className="space-y-3 text-sm text-gray-300">
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center ">
                     <MapPin className="w-4 h-4 mr-2" />
                     Based in Philippines
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center ">
                     <Target className="w-4 h-4 mr-2" />
                     Available for opportunities
                   </div>
@@ -144,14 +138,12 @@ const About = () => {
             >
               {/* Professional Bio */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-white">
-                  Professional Bio
-                </h3>
+                <h3 className="text-2xl font-bold text-white"></h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm a recent graduate with a passion for creating meaningful
-                  digital experiences. I specialize in building modern web
-                  applications using React, Node.js, and Laravel, with a focus
-                  on clean code and exceptional user experiences.
+                  An Information Technology graduate with a passion for creating
+                  meaningful digital experiences. I specialize in building
+                  modern web applications focusing on clean code and exceptional
+                  user experiences.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   My journey in technology started with curiosity and has
@@ -160,7 +152,16 @@ const About = () => {
                   technologies and contribute to impactful projects.
                 </p>
               </div>
+            </div>
 
+            <div
+              className={`lg:col-span-4 space-y-8 transform transition-all duration-700 flex flex-col justify-center items-center ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }`}
+              style={{ animationDelay: "250ms" }}
+            >
               {/* Background */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-white">Background</h3>
@@ -207,59 +208,6 @@ const About = () => {
                       {skill}
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Interests */}
-              <div className="space-y-4 text-left">
-                <h3 className="text-2xl font-bold text-white">Interests</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                    <div className="p-2 bg-green-500/20 rounded-lg">
-                      <Code className="w-5 h-5 text-green-400" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Clean Code</div>
-                      <div className="text-sm text-gray-400">
-                        Maintainable solutions
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                    <div className="p-2 bg-purple-500/20 rounded-lg">
-                      <Lightbulb className="w-5 h-5 text-purple-400" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Innovation</div>
-                      <div className="text-sm text-gray-400">
-                        New technologies
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                    <div className="p-2 bg-orange-500/20 rounded-lg">
-                      <Globe className="w-5 h-5 text-orange-400" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">
-                        Open Source
-                      </div>
-                      <div className="text-sm text-gray-400">
-                        Community projects
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                    <div className="p-2 bg-red-500/20 rounded-lg">
-                      <BookOpen className="w-5 h-5 text-red-400" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Learning</div>
-                      <div className="text-sm text-gray-400">
-                        Continuous growth
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
